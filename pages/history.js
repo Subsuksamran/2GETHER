@@ -8,9 +8,9 @@ import { useState, useEffect } from 'react';
 export default function Home({ posts }) {
   const { data: session } = useSession()
   const [data, setData] = useState([]);
-  
+
   const getdata = async () => {
-    console.log("getdata");
+    // console.log("getdata");
     const uid = session?.user?.name?.userID
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_URL_ROOT}/api/history/history?userID=${uid}`);
@@ -28,20 +28,20 @@ export default function Home({ posts }) {
   }, [session?.user])
 
   if (session) {
-  
-  
-    
+
+
+
 
     return (
       <>
         <center>
 
           <div>
-           
+
             <section class="wrapper">
-  <div class="top">History</div>
-  <div class="bottom" aria-hidden="true">History</div>
-</section>
+              <div class="top">History</div>
+              <div class="bottom" aria-hidden="true">History</div>
+            </section>
             {
               !data ? 'loading' : data.map((post) => {
 

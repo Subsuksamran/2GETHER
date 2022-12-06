@@ -79,42 +79,38 @@ export default function Post({ posts }) {
                   <div class="child">
                     <div id="card">
 
-                   
 
 
-                            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                              <Card sx={{ border: '4px solid #2e88c7', borderRadius: '10px' }} >
 
-                                <CardContent>
-                                  <div key={pid.postID}>
+                      <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Card sx={{ border: '4px solid #2e88c7', borderRadius: '10px' }} >
 
-                                    <Typography gutterBottom variant="h5" component="div">
-                                      Chauffeur : {pid.name}
-                                    </Typography>
-                                    <Typography variant="h6" color="text.secondary">
-                                      Title : {pid.title}
-                                    </Typography>
-                                    <Typography variant="h6" color="text.secondary">
-                                      Seat Count : {pid.seat}
-                                    </Typography>
-                                    <Typography variant="h6" color="text.secondary">
-                                      Car Type : {pid.cartype}
-                                    </Typography>
-                                    <Typography variant="h6" color="text.secondary">Price : {pid.price} Baht</Typography>
-                                  </div>
-                                </CardContent>
-                                <CardActions className='ACPro'>
-                                  <Button href={`/find/find`} variant="outlined" background-color="primary" >Back</Button>&nbsp;&nbsp;
+                          <CardContent>
+                            <div key={pid.postID}>
 
-                                  <Button onClick={() => Accept(pid)} href={`/managebook/${pid.postID}`} variant="outlined" color="success" >Accept</Button>
-                                </CardActions>
-                              </Card>
-
+                              <Typography gutterBottom variant="h5" component="div">
+                                Chauffeur : {pid.name}
+                              </Typography>
+                              <Typography variant="h6" color="text.secondary">
+                                Title : {pid.title}
+                              </Typography>
+                              <Typography variant="h6" color="text.secondary">
+                                Seat Count : {pid.seat}
+                              </Typography>
+                              <Typography variant="h6" color="text.secondary">
+                                Car Type : {pid.cartype}
+                              </Typography>
+                              <Typography variant="h6" color="text.secondary">Price : {pid.price} Baht</Typography>
                             </div>
+                          </CardContent>
+                          <CardActions className='ACPro'>
+                            <Button href={`/find/find`} variant="outlined" background-color="primary" >Back</Button>&nbsp;&nbsp;
 
+                            <Button onClick={() => Accept(pid)} href={`/managebook/${pid.postID}`} variant="outlined" color="success" >Accept</Button>
+                          </CardActions>
+                        </Card>
 
-                  
-
+                      </div>
 
 
                     </div>
@@ -124,42 +120,8 @@ export default function Post({ posts }) {
                 </div>
               </div>
 
-              // posts.map((post) => {
-
-              //   // setPid(post.postID)
-              //   return (
-              //     <div style={{ display: 'flex', justifyContent: 'center' }}>
-              //       <Card sx={{ border: '4px solid #2e88c7' }} >
-
-              //         <CardContent>
-              //           <div key={post.postID}>
-
-              //             <Typography gutterBottom variant="h5" component="div">
-              //               Chauffeur : {post.name}
-              //             </Typography>
-              //             <Typography variant="body2" color="text.secondary">
-              //               Title : {post.title}
-              //             </Typography>
-              //             <Typography variant="body2" color="text.secondary">
-              //               Seat Count : {post.seat}
-              //             </Typography>
-              //             <Typography variant="body2" color="text.secondary">
-              //               Car Type : {post.cartype}
-              //             </Typography>
-              //             <Typography variant="body2" color="text.secondary">Price : {post.price} Baht</Typography>
-              //           </div>
-              //         </CardContent>
-              //       </Card>
-
-
-              //     </div>
-              //   )
-
-              // })
 
             }
-
-            {/* <Link href={`/`}>Back</Link> */}
 
 
 

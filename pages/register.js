@@ -11,6 +11,7 @@ export default function Post() {
     const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
+    const [sos_email, setSos_email] = useState('');
 
 
 
@@ -68,6 +69,14 @@ export default function Post() {
                     value={email}
                     color="primary"
                     onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <br></br> <br></br>
+                <TextField type="text"
+                    fullWidth label="Enter Emergency Contact"
+                    value={sos_email}
+                    color="primary"
+                    onChange={(e) => setSos_email(e.target.value)}
                     required
                 />
                 <br></br> <br></br>
