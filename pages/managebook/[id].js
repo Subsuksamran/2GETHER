@@ -42,24 +42,27 @@ export default function Post({ posts }) {
 
   if (session) {
     // console.log(data[0].emergency_email); 
-    const contact = data[0].emergency_email
+    // const contact = data[0].emergency_email
     // const id = data[0].id
-    const name = data[0].name
+    // const name = data[0].name
     // console.log(contact);
 
 
     const send_sos = () => {
+      data.map((detail) => {
+        // console.log(detail.emergency_email);
       alert("Send SOS Success")
       Email.send({
         SecureToken: "7d5c8092-1a70-402d-bfcf-913f61b98380",
-        To: contact,
+        To: detail.emergency_email,
         From: '6231302007@lamduan.mfu.ac.th',
-        Subject: "Emergency SOS Message from" + name,
-        Body: "Emergency SOS message services from 2Gether. You are receiving this message because " + name + " listed you as an emergency contact."
+        Subject: "Emergency SOS Message from" + detail.name,
+        Body: "Emergency SOS message services from 2Gether. You are receiving this message because " + detail.name + " listed you as an emergency contact."
       }).then(
         message => alert(message),
 
       );
+    })
     }
 
     return (
